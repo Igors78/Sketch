@@ -6,7 +6,8 @@ body {
     align-items: center;
 }
     #container {
-        display: inline-grid;
+        display: grid;
+        /*justify-content: space-evenly;*/
         width: 500px;
         height: 500px;
         grid-template-columns:  auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
