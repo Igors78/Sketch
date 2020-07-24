@@ -3,7 +3,30 @@
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-    #container{
-        display: grid;
-        
+    #container {
+        display: inline-grid;
+        width: 500px;
+        height: 500px;
+        grid-template-columns: auto;
+        border: 10px solid rgb(2, 53, 36);
+        border-radius: 10px;
+        padding:0;
+
+    }
+    button {
+        display: block;
+        margin: 10px 5px;
+        padding: 10px 20px;
+        background-color: rgb(6, 13, 107);
+        color: white;
+        border: none;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    .controls {
+        display: flex;
+        align-items: center;
+    }
+    label {
+        margin: 10px 10px;
     }
