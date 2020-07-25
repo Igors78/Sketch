@@ -27,10 +27,8 @@ function changeColor(e){
 
 
 
-button.addEventListener("click", function () {
-    setContainer(squares, container);
-});
-function setContainer(squares, container) {
+button.addEventListener("click", setContainer);
+function setContainer() {
         container.innerHTML = '';
         let grid = prompt('Set the squares quantity in the grid','16');
         let sqrGrid = grid * grid;
