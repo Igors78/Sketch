@@ -4,12 +4,15 @@ const setButton = document.querySelector('#reset');
 const clearButton = document.querySelector('#clear');
 let squares = [];
 sketch.style.cssText = "font-size: 30px; font-weight: bold; margin-top: 5px; letter-spacing: 5px";
-container.addEventListener('mousemove', changeColor, false);
+//container.addEventListener('click', changeColor, false);
+let action = 1;
+
+
 for (let i = 0; i < 256; i++) {
     squares[i] = document.createElement('div');
     squares[i].style.cssText = "border: 1px solid grey; height: auto; padding: 0; margin: 0";
-//    squares[i].addEventListener('mousedown', changeColor, false);
-//    squares[i].addEventListener('mouseover', changeColor, false);
+ //   squares[i].addEventListener('click', changeColor, false);
+    squares[i].addEventListener('mouseover', changeColor, false);
     container.appendChild(squares[i]);
 }
 function randomColor(e){
@@ -23,20 +26,27 @@ function randomColor(e){
 
 
 function changeColor(e){
-    if (e.target !== e.currentTarget) {
-        clickedItem = e.target.id;
-    
-    if (document.getElementById("random").checked) {
-        randomColor(e);
-    } else if (document.getElementById("erase").checked){
-        e.target.style.backgroundColor = 'white';
-    }else{
-        e.target.style.backgroundColor = 'black'; 
-    }
-    e.stopPropagation();
-}
-}
+    if ( action == 1 ) {
+       // container.addEventListener('mouseenter', changeColor, false);
+       // if (e.target !== e.currentTarget) {
+      //      clickedItem = e.target.id;
+        
+        if (document.getElementById("random").checked) {
+            randomColor(e);
+        } else if (document.getElementById("erase").checked){
+            e.target.style.backgroundColor = 'white';
+        }else{
+            e.target.style.backgroundColor = 'black'; 
+        }
+       // e.stopPropagation();
 
+       // action = 2;
+   // }else{
+    //    container.removeEventListener('mouseover', changeColor);
+        action = 1;
+    //}
+}
+}
 clearButton.addEventListener("click", reloadPage);
 setButton.addEventListener("click", setContainer);
 function setContainer() {
