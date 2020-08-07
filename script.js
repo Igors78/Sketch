@@ -4,20 +4,19 @@ const setButton = document.querySelector('#reset');
 const clearButton = document.querySelector('#clear');
 let squares = [];
 sketch.style.cssText = "font-size: 30px; font-weight: bold; margin-top: 5px; letter-spacing: 5px";
-//container.addEventListener('click', changeColor, false);
 let action = 1;
 
 
 for (let i = 0; i < 256; i++) {
     squares[i] = document.createElement('div');
     squares[i].style.cssText = "border: 1px solid grey; height: auto; padding: 0; margin: 0";
- //   squares[i].addEventListener('click', changeColor, false);
     squares[i].addEventListener('click', startPaint, false);
     container.appendChild(squares[i]);
 }
 function startPaint() {
     if (action == 1){
         squares.forEach(setList);
+        
         action++;
         
     }else{
@@ -25,9 +24,9 @@ function startPaint() {
         action = 1;
     }
 }
+
 function setList(e){
     addEventListener('mousemove', changeColor);
-    
 }
 function removeList(e){
     removeEventListener('mousemove', changeColor);
@@ -44,7 +43,7 @@ function randomColor(e){
 
 
 function changeColor(e){
-   
+
         if (document.getElementById("random").checked) {
             randomColor(e);
 
@@ -53,7 +52,7 @@ function changeColor(e){
         }else{
             e.target.style.backgroundColor = 'black'; 
         }
-      
+
 }
 
 clearButton.addEventListener("click", reloadPage);
