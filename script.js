@@ -43,14 +43,16 @@ function randomColor(e){
 
 
 function changeColor(e){
-
+    e.stopPropagation();
         if (document.getElementById("random").checked) {
             randomColor(e);
 
         } else if (document.getElementById("erase").checked){
             e.target.style.backgroundColor = 'white';
+            
         }else{
             e.target.style.backgroundColor = 'black'; 
+            
         }
 
 }
