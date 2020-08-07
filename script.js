@@ -12,9 +12,27 @@ for (let i = 0; i < 256; i++) {
     squares[i] = document.createElement('div');
     squares[i].style.cssText = "border: 1px solid grey; height: auto; padding: 0; margin: 0";
  //   squares[i].addEventListener('click', changeColor, false);
-    squares[i].addEventListener('mouseover', changeColor, false);
+    squares[i].addEventListener('click', startPaint, false);
     container.appendChild(squares[i]);
 }
+function startPaint() {
+    if (action == 1){
+        squares.forEach(setList);
+        action++;
+        
+    }else{
+        squares.forEach(removeList);
+        action = 1;
+    }
+}
+function setList(e){
+    addEventListener('mousemove', changeColor);
+    
+}
+function removeList(e){
+    removeEventListener('mousemove', changeColor);
+}
+
 function randomColor(e){
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
@@ -26,27 +44,18 @@ function randomColor(e){
 
 
 function changeColor(e){
-    if ( action == 1 ) {
-       // container.addEventListener('mouseenter', changeColor, false);
-       // if (e.target !== e.currentTarget) {
-      //      clickedItem = e.target.id;
-        
+   
         if (document.getElementById("random").checked) {
             randomColor(e);
+
         } else if (document.getElementById("erase").checked){
             e.target.style.backgroundColor = 'white';
         }else{
             e.target.style.backgroundColor = 'black'; 
         }
-       // e.stopPropagation();
+      
+}
 
-       // action = 2;
-   // }else{
-    //    container.removeEventListener('mouseover', changeColor);
-        action = 1;
-    //}
-}
-}
 clearButton.addEventListener("click", reloadPage);
 setButton.addEventListener("click", setContainer);
 function setContainer() {
@@ -57,7 +66,7 @@ function setContainer() {
             for(let i = 0; i < sqrGrid; i++) {
                 squares[i] = document.createElement('div');
                 squares[i].style.cssText = "border: 1px solid grey; height: auto; padding: 0; margin: 0";
-                squares[i].addEventListener("mouseenter", changeColor);
+                squares[i].addEventListener("click", startPaint);
                 container.appendChild(squares[i]);
             }
         let str = '';
