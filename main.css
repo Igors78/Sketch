@@ -1,16 +1,15 @@
 body {
-    margin-top: 5px;
+    margin: 5px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-html {   background: #d5cea6;
+    background: #d5cea6;
 background: -moz-linear-gradient(top,  #d5cea6 0%, #c9c190 40%, #b7ad70 100%);
 background: -webkit-linear-gradient(top,  #d5cea6 0%,#c9c190 40%,#b7ad70 100%);
 background: linear-gradient(to bottom,  #d5cea6 0%,#c9c190 40%,#b7ad70 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d5cea6', endColorstr='#b7ad70',GradientType=0 );
-border: 1px solid black;
+border: 1px solid rgb(223, 12, 12);
 }
     #container {
         display: grid;
@@ -23,15 +22,21 @@ border: 1px solid black;
         margin-top: 10px;
         background-color: white;
     }
-    button {
+    .button {
         display: block;
-        margin: 10px 5px;
-        padding: 10px 20px;
+        margin: 13px;
+        padding: 13px;
         background-color: rgb(6, 13, 107);
         color: white;
         border: none;
         font-weight: bold;
         border-radius: 10px;
+        
+        
+    }
+    .button:hover {
+        background-color: cornflowerblue;
+        cursor: pointer;
     }
     .controls {
         display: flex;

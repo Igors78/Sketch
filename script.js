@@ -67,11 +67,11 @@ function setContainer() {
                 squares[i].style.cssText = "border: 1px solid #E0FFFF; height: auto; padding: 0; margin: 0";
                 squares[i].addEventListener("click", startPaint, false);
                 container.appendChild(squares[i]);
+                setButton.style.cssText = "border: none";
             }
-        let str = '';
-            for (let i = 0; i < Number(grid); i++) {
-            str += "auto ";
-        
+let str = '';
+    for (let i = 0; i < Number(grid); i++) {
+        str += "auto ";
         container.style.cssText = `grid-template-columns: ${str};`;
         }
     };
