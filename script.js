@@ -9,7 +9,7 @@ let action = 1;
 
 for (let i = 0; i < 256; i++) {
     squares[i] = document.createElement('div');
-    squares[i].style.cssText = "border: 1px solid grey; height: auto; padding: 0; margin: 0";
+    squares[i].style.cssText = "border: 1px solid #E0FFFF; height: auto; padding: 0; margin: 0";
     squares[i].addEventListener('click', startPaint, false);
     container.appendChild(squares[i]);
 }
@@ -24,11 +24,11 @@ function startPaint(e) {
 }
 
 function setList(e){
-    e.addEventListener('mouseover', changeColor);
+    e.addEventListener('mousemove', changeColor);
    // e.stopPropagation;
 }
 function removeList(e){
-    e.removeEventListener('mouseover', changeColor);
+    e.removeEventListener('mousemove', changeColor);
 }
 
 function randomColor(e){
@@ -64,7 +64,7 @@ function setContainer() {
         
             for(let i = 0; i < sqrGrid; i++) {
                 squares[i] = document.createElement('div');
-                squares[i].style.cssText = "border: 1px solid grey; height: auto; padding: 0; margin: 0";
+                squares[i].style.cssText = "border: 1px solid #E0FFFF; height: auto; padding: 0; margin: 0";
                 squares[i].addEventListener("click", startPaint, false);
                 container.appendChild(squares[i]);
             }
