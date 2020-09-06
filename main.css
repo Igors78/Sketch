@@ -15,7 +15,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', end
         display: grid;
         width: 480px;
         height: 480px;
-        grid-template-columns:  auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+        grid-template-columns: repeat(16,auto);
         border: 10px solid rgb(2, 53, 36);
         border-radius: 10px;
         padding:0;

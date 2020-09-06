@@ -25,9 +25,11 @@ function startPaint(e) {
 
 function setList(e){
     e.addEventListener('mousemove', changeColor);
+    container.style.cursor = "crosshair";
 }
 function removeList(e){
     e.removeEventListener('mousemove', changeColor);
+    container.style.cursor = "auto";
 }
 
 function randomColor(e){
@@ -66,14 +68,14 @@ function setContainer() {
                 squares[i].style.cssText = "border: 1px solid #E0FFFF; height: auto; padding: 0; margin: 0";
                 squares[i].addEventListener("click", startPaint, false);
                 container.appendChild(squares[i]);
-                setButton.style.cssText = "border: none";
+                setButton.style.cssText = "border: none;";
             }
-let str = '';
-    for (let i = 0; i < Number(grid); i++) {
-        str += "auto ";
-        container.style.cssText = `grid-template-columns: ${str};`;
+//let str = '';
+//    for (let i = 0; i < Number(grid); i++) {
+//        str += "auto ";
+        container.style.cssText = `grid-template-columns: repeat(${grid}, auto);`;
         }
-    };
+//    };
     function reloadPage(e) {
         window.location.reload()
     };
