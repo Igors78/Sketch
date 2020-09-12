@@ -21,6 +21,23 @@
             <label for="erase"/>Erase
             <input type="radio" name="radio" id="erase" value="erase"></label>
         </div>
+        <div class="form-popup" id="myForm">
+            <div class="form-container">
+                <h1>Info</h1>
+                <p>This project created as part of TOP, responsive web-design course.
+                    Start drawing by left-click on the mouse, stop by the second click. While 
+                    drawing the cursor changes to cross-pointer. 
+                    Change the colorizing to random rainbow by selecting appropriate button. 
+                    Select erase button to decolorize the draw. Resize the field by entering side size
+                    (Resize button). Return to initial field size by pressing Initial button.
+                </p>
+            
+            <button class="btn cancel" onclick="closeForm()">Close</button>
+            </div>
+            
+        </div>
+        <button class="open-button" onclick="openForm()">Information</button>
+
         <script src="script.js"></script> 
     </body>
 </html>

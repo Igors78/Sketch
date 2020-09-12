@@ -79,3 +79,10 @@ function setContainer() {
     function reloadPage(e) {
         window.location.reload()
     };
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
