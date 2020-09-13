@@ -54,27 +54,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8e0de', end
     cursor: pointer;
     opacity: 0.8;
     position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 300px;
+    top: 10px;
+    left: 10px;
+    width: 306px;
 }
 
   /* The popup form - hidden by default */
 .form-popup {
     display: none;
     position: fixed;
-    bottom: 100px;
-    right: 28px;
+    top: 50px;
+    left: 10px;
     border: 3px solid #f1f1f1;
     z-index: 9;
     font-family: Chilanka; font-size: 20px;
 }
 h1 {
     font-size: 30px;
+    font-weight: bold;
 }
   /* Add styles to the form container */
 .form-container {
-    max-width: 300px;
+    width: 300px;
     padding: 10px;
     background-color: white;
 }
@@ -87,7 +88,8 @@ h1 {
   /* Add a red background color to the cancel button */
 .form-container .cancel {
     background-color: red;
-    margin-top: 50px;
+    margin-top: 0px;
+    font-weight: bold;
 }
 
   /* Add some hover effects to buttons */

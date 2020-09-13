@@ -3,7 +3,7 @@ const container = document.querySelector('#container');
 const setButton = document.querySelector('#reset');
 const clearButton = document.querySelector('#clear');
 let squares = [];
-sketch.style.cssText = "font-family: Chilanka; font-size: 30px; font-weight: bold; margin-top: 5px; letter-spacing: 5px";
+sketch.style.cssText = "font-family: Chilanka; font-size: 30px; font-weight: bold; margin-top: 50px; letter-spacing: 5px";
 let action = 1;
 
 
